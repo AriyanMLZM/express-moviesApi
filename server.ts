@@ -1,12 +1,14 @@
 import express from 'express'
 
-import home from './routes/home'
+import { homeRouter, apiRouter } from './routes'
 
 const app = express()
 
+const port = 4000
 app.set('view engine', 'ejs')
-app.use(express.static('./views'))
+app.use(express.static('public'))
 
-app.use('/', home)
+app.use('/', homeRouter)
+app.use('/api', apiRouter)
 
-app.listen(4000, () => console.log('Server says Hi.'))
+app.listen(port, () => console.log(`Server says Hi from ${port}.`))
