@@ -1,10 +1,9 @@
 import { Router } from 'express'
 
-import { apiMovieController, apiShowController } from '../controllers'
+import { apiCreateController } from '../controllers'
 
 const router = Router()
 
-router.post('/createMovie', apiMovieController)
-router.post('/createShow', apiShowController)
+router.post('/create', apiCreateController)
 
 export default router

@@ -1,11 +1,5 @@
 import moviesController from './moviesController'
 import showsController from './showsController'
-import apiMovieController from './apiMovieController'
-import apiShowController from './apiShowController'
+import apiCreateController from './apiCreateController'
 
-export {
-	moviesController,
-	showsController,
-	apiMovieController,
-	apiShowController,
-}
+export { moviesController, showsController, apiCreateController }
