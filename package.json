@@ -1,0 +1,28 @@
+{
+	"name": "movies",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "concurrently --kill-others \"npm run style\" \"npm run nodemon\"",
+		"style": "npx tailwindcss -i ./views/css/input.css -o ./views/css/output.css --watch",
+		"nodemon": "nodemon --ext * server.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"ejs": "^3.1.10",
+		"express": "^4.21.1"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.0",
+		"@types/node": "^22.9.0",
+		"concurrently": "^9.1.0",
+		"nodemon": "^3.1.7",
+		"tailwindcss": "^3.4.14",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.6.3"
+	}
+}
