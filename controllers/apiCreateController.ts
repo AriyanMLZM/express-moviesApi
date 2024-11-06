@@ -26,6 +26,7 @@ const apiCreateController = async (req: Request, res: Response) => {
 					seasons: data.totalSeasons,
 					imdb: data.imdbRating,
 					poster: data.Poster,
+					year: data.Year,
 				})
 				break
 		}

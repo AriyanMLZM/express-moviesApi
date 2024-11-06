@@ -9,6 +9,10 @@ const seriesSchema = new Schema({
 		type: String,
 		required: true,
 	},
+	year: {
+		type: String,
+		required: true,
+	},
 	imdb: {
 		type: String,
 		required: true,
