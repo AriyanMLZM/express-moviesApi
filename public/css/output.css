@@ -554,7 +554,196 @@ video {
   display: none;
 }
 
-.text-blue-600 {
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+
+.mt-\[20px\] {
+  margin-top: 20px;
+}
+
+.mt-\[8px\] {
+  margin-top: 8px;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-\[20px\] {
+  height: 20px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-\[40px\] {
+  gap: 40px;
+}
+
+.gap-\[20px\] {
+  gap: 20px;
+}
+
+.gap-\[\] {
+  gap: ;
+}
+
+.gap-\[10px\] {
+  gap: 10px;
+}
+
+.gap-\[30px\] {
+  gap: 30px;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
+}
+
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.p-\[20px\] {
+  padding: 20px;
+}
+
+.px-\[20px\] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.text-\[17px\] {
+  font-size: 17px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grad {
+  background: linear-gradient(
+		45deg,
+		rgba(0, 0, 0, 1) 15%,
+		rgba(0, 161, 177, 1) 100%
+	);
+}
+
+.hover\:text-\[\#00a1b1\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 161 177 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
 }

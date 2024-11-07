@@ -1,7 +1,9 @@
 import { Response, Request } from 'express'
+import { Movies } from '../models'
 
-const moviesController = (_: Request, res: Response) => {
-	res.render('index')
+const moviesController = async (_: Request, res: Response) => {
+	const movies = await Movies.find()
+	res.render('index', { movies })
 }
 
 export default moviesController
