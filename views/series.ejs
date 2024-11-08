@@ -2,9 +2,10 @@
 <html lang="en">
 	<%- include('./partials/head', {title: "Series"}) %>
 	<body>
-		<main class="w-screen h-screen grad">
-			<%- include('./partials/navbar') %> <%- include('./partials/list', {data:
-			series}) %>
+		<%- include('./partials/navbar') %>
+		<main class="w-screen h-screen overflow-hidden grad pt-[50px]">
+			<%- include('./partials/list', {data: series}) %>
 		</main>
+		<%- include("./partials/modal") %>
 	</body>
 </html>

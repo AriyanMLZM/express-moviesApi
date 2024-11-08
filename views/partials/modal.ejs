@@ -1,0 +1,82 @@
+<div
+	id="modal"
+	class="hidden absolute w-screen h-screen left-0 top-0 items-center justify-center bg-black/80"
+>
+	<section class="bg-[#111] rounded-[20px] h-[450px] w-[300px] p-[20px]">
+		<button
+			class="relative flex-center w-[30px] h-[30px] left-[-10px] top-[-10px]"
+			onclick="closeModal()"
+		>
+			<svg
+				width="30px"
+				height="30px"
+				viewBox="0 0 24 24"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				stroke="#ffffff"
+			>
+				<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+				<g
+					id="SVGRepo_tracerCarrier"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				></g>
+				<g id="SVGRepo_iconCarrier">
+					<g id="Menu / Close_MD">
+						<path
+							id="Vector"
+							d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
+							stroke="#ffffff"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+					</g>
+				</g>
+			</svg>
+		</button>
+		<div class="flex flex-col gap-[20px] text-white">
+			<input
+				id="in-title"
+				type="text"
+				placeholder="Title"
+				class="t-input w-full"
+				autocomplete="off"
+			/>
+			<div class="flex items-center justify-between">
+				<input
+					id="in-year"
+					type="text"
+					placeholder="Year"
+					class="t-input w-[100px]"
+					autocomplete="off"
+				/>
+				<label class="flex-center gap-[10px] text-[18px] pr-[20px]">
+					<input
+						type="checkbox"
+						id="in-series"
+						class="appearance-none rounded w-[20px] h-[20px] bg-[#222] checked:bg-[#00a1b1]"
+					/>
+					Show
+				</label>
+			</div>
+			<div class="flex-center">
+				<button class="btn" type="button" onclick="find()">Find</button>
+			</div>
+			<div
+				id="add-movie"
+				class="hidden items-center justify-center flex-col gap-[10px]"
+			>
+				<div class="w-[90px] h-[135px]">
+					<img
+						id="add-image"
+						src=""
+						class="rounded-[20px] w-full h-full object-cover"
+					/>
+				</div>
+				<h2 id="add-year">2017</h2>
+				<button class="btn" type="button" onclick="add()">Add</button>
+			</div>
+		</div>
+	</section>
+</div>

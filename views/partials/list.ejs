@@ -1,3 +1,5 @@
-<section class="grid grid-cols-2 md:grid-cols-5 gap-[40px] p-[20px]">
+<section
+	class="h-full w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-[40px] px-[20px] overflow-auto pb-[50px] pt-[20px]"
+>
 	<% for( item of data) { %> <%- include('./card', {item}) %> <% } %>
 </section>
