@@ -642,6 +642,14 @@ video {
   height: 100vh;
 }
 
+.h-\[30\] {
+  height: 30;
+}
+
+.h-\[45px\] {
+  height: 45px;
+}
+
 .w-\[100px\] {
   width: 100px;
 }
@@ -676,6 +684,18 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[45px\] {
+  width: 45px;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .appearance-none {
@@ -758,6 +778,10 @@ video {
   background-color: transparent;
 }
 
+.fill-blue-500 {
+  fill: #3b82f6;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -805,6 +829,18 @@ video {
   font-size: 20px;
 }
 
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[60px\] {
+  font-size: 60px;
+}
+
+.text-\[25px\] {
+  font-size: 25px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -812,6 +848,20 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-blue-50 {
+  --tw-text-opacity: 1;
+  color: rgb(239 246 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .flex-center {
@@ -885,6 +935,11 @@ video {
 }
 
 .hover\:text-\[\#00a1b1\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 161 177 / var(--tw-text-opacity));
+}
+
+.hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(0 161 177 / var(--tw-text-opacity));
 }

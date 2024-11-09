@@ -21,10 +21,10 @@
 	<button
 		onclick="deleteMovie(event)"
 		type="button"
-		class="w-[25px] h-[25px]"
+		class="w-[25px] h-[25px] text-white hover:text-primary"
 		data-id="<%= item._id %>"
 		data-type="<%= item.seasons ? "series" : "movie" %>"
 	>
-		<img src="icons/trash.svg" width="w-full h-full">
+		<i class="fa-solid fa-trash"></i>
 	</button>
 </div>
