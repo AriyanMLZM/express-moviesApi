@@ -37,6 +37,10 @@
 			<div class="flex-center">
 				<button class="btn" type="button" onclick="findMovie()">Find</button>
 			</div>
+			<div id="modal-loading" class="hidden items-center justify-center">
+				<%- include('./loader') %>
+			</div>
+			<div id="modal-error" class="text-center font-bold"></div>
 			<div
 				id="add-movie"
 				class="hidden items-center justify-center flex-col gap-[10px]"

@@ -15,6 +15,15 @@ const findMovie = async () => {
 	const inTitle = document.getElementById('in-title')
 	const inYear = document.getElementById('in-year')
 	const inSeries = document.getElementById('in-series')
+
+	const addMovie = document.getElementById('add-movie')
+	addMovie.style.display = 'none'
+
+	const modalError = document.getElementById('modal-error')
+	modalError.innerText = ''
+
+	const modalLoading = document.getElementById('modal-loading')
+	modalLoading.style.display = 'flex'
 	const response = await fetch('/api/find', {
 		method: 'POST',
 		body: JSON.stringify({
@@ -26,16 +35,22 @@ const findMovie = async () => {
 			'Content-type': 'application/json; charset=UTF-8',
 		},
 	})
-	const data = await response.json()
+	modalLoading.style.display = 'none'
+	if (response.status === 200) {
+		const data = await response.json()
 
-	const addMovie = document.getElementById('add-movie')
-	addMovie.style.display = 'flex'
+		addMovie.style.display = 'flex'
 
-	const addImage = document.getElementById('add-image')
-	addImage.src = data.poster
+		const addImage = document.getElementById('add-image')
+		addImage.src = data.poster
 
-	const addYear = document.getElementById('add-year')
-	addYear.innerText = data.year
+		const addYear = document.getElementById('add-year')
+		addYear.innerText = data.year
+	} else if (response.status === 404) {
+		modalError.innerText = 'No item found!'
+	} else {
+		modalError.innerText = 'Server not available!'
+	}
 }
 
 const addMovie = async () => {
