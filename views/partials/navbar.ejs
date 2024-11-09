@@ -1,8 +1,8 @@
 <nav
-	class="w-full fixed h-[50px] flex-center text-[20px] font-bold text-white bg-transparent"
+	class="w-full fixed h-[50px] flex-center text-[20px] font-bold bg-transparent"
 >
 	<ul class="flex-center gap-[40px]">
-		<li class="hover:text-[#00a1b1]"><a href="/">Movies</a></li>
+		<li class="hover:text-[#00a1b1] <%= active === 0 ? "text-primary" : "text-white"  %>"><a href="/">Movies</a></li>
 		<button
 			type="button"
 			onclick="openModal()"
@@ -10,6 +10,6 @@
 		>
 			<i class="fa-solid fa-circle-plus text-[30px]"></i>
 		</button>
-		<li class="hover:text-primary"><a href="/series">Series</a></li>
+		<li class="hover:text-primary <%= active === 1 ? "text-primary" : "text-white"  %>"><a href="/series">Series</a></li>
 	</ul>
 </nav>

@@ -2,7 +2,7 @@
 <html lang="en">
 	<%- include('./partials/head', {title: "Movies"}) %>
 	<body>
-		<%- include('./partials/navbar') %>
+		<%- include('./partials/navbar', {active: 0}) %>
 		<main class="w-screen h-screen overflow-hidden grad pt-[50px]">
 			<%- include('./partials/list', {data: movies}) %>
 		</main>
