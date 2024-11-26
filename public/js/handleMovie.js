@@ -1,14 +1,16 @@
 const deleteMovie = async (event) => {
-	await fetch(`/api/delete/${event.target.parentElement.dataset.id}`, {
-		method: 'DELETE',
-		body: JSON.stringify({
-			type: event.target.parentElement.dataset.type,
-		}),
-		headers: {
-			'Content-type': 'application/json; charset=UTF-8',
-		},
-	})
-	location.reload()
+	if (confirm('Are you sure to delete the item?')) {
+		await fetch(`/api/delete/${event.target.parentElement.dataset.id}`, {
+			method: 'DELETE',
+			body: JSON.stringify({
+				type: event.target.parentElement.dataset.type,
+			}),
+			headers: {
+				'Content-type': 'application/json; charset=UTF-8',
+			},
+		})
+		location.reload()
+	}
 }
 
 const findMovie = async () => {
@@ -57,7 +59,17 @@ const addMovie = async () => {
 	const inTitle = document.getElementById('in-title')
 	const inYear = document.getElementById('in-year')
 	const inSeries = document.getElementById('in-series')
-	await fetch('/api/create', {
+
+	const addMovie = document.getElementById('add-movie')
+	addMovie.style.display = 'none'
+
+	const modalError = document.getElementById('modal-error')
+	modalError.innerText = ''
+
+	const modalLoading = document.getElementById('modal-loading')
+	modalLoading.style.display = 'flex'
+
+	const response = await fetch('/api/create', {
 		method: 'POST',
 		body: JSON.stringify({
 			name: inTitle.value,
@@ -68,6 +80,13 @@ const addMovie = async () => {
 			'Content-type': 'application/json; charset=UTF-8',
 		},
 	})
-	closeModal()
-	location.reload()
+	if (response.status === 200) {
+		addMovie.style.display = 'none'
+		closeModal()
+		location.reload()
+	} else if (response.status === 404) {
+		modalError.innerText = 'No item found!'
+	} else {
+		modalError.innerText = 'Server not available!'
+	}
 }
